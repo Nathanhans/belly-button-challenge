@@ -62,14 +62,14 @@ function optionChanged(value)
        console.log(samples[i]);
 
 //CHART 1, HORIZONTAL BAR
-      let trace1 = {x: vals, y: odus, type: 'bar', orientation: 'h' };
+      let trace1 = {x: vals, y: odus, type: 'bar', orientation: 'h',hoverinfo: odus };
       let data = [trace1];
       let layout = { };
       Plotly.newPlot("bar", data, layout);    
 
 //CHART 2, BUBBLE
 
-      let trace2 = {x: tot_odus,y: tot_vals, mode: 'markers', marker: { size: tot_vals,color: tot_odus }};
+      let trace2 = {x: tot_odus,y: tot_vals, mode: 'markers', marker: { size: tot_vals,color: tot_odus, hoverinfo: odus} };
       let data2 = [trace2];
 
       Plotly.newPlot('bubble', data2);
